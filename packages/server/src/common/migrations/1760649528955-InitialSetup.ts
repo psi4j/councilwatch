@@ -16,7 +16,18 @@ export class InitialSetup1760649528955 implements MigrationInterface {
       columns: [
         { name: 'id', type: 'uuid', isPrimary: true, isUnique: true, isNullable: false },
         { name: 'email', type: 'varchar', isUnique: true, isNullable: false },
-        { name: 'role', type: this.USER_ROLE_ENUM, isNullable: false, default: `'user'` },
+        {
+          name: 'role',
+          type: this.USER_ROLE_ENUM,
+          isNullable: false,
+          default: `'user'`,
+        },
+        {
+          name: 'councils',
+          type: 'text',
+          isNullable: false,
+          default: "''",
+        },
       ],
     });
 
